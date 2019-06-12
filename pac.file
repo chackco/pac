@@ -4,6 +4,10 @@ function FindProxyForURL(url, host) {
 	{
 		return "DIRECT";
 	}
+	if (shExpMatch(host, "*.demolab.local"))
+	{
+		return "DIRECT";
+	}
 
 	// URLs within this network are accessed through
 	// port 8080 on fastproxy.example.com:
